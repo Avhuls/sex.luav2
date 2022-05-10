@@ -1,0 +1,80 @@
+ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/WetCheezit/Bracket-V2/main/src.lua"))()
+   local Window, MainGUI = Library:CreateWindow("Crimson")
+   local function callback(Text)
+      if Text == "Button1 text" then
+       print ("k")
+     elseif Text == ("yes.") then
+      print ("yes.")
+      end
+     end
+     
+  local NotificationBindable = Instance.new("BindableFunction")
+  NotificationBindable.OnInvoke = callback
+     
+  game.StarterGui:SetCore("SendNotification",  {
+      Title = "ur whitelisted";
+      Text = "ok";
+      Icon = "";
+      Duration = 5;
+      Button1 = "ez";
+      Button2 = "women";
+      Callback = NotificationBindable;
+     })
+  
+   
+   local Tab1 = Window:CreateTab("Yea")
+   local Tab2 = Window:CreateTab("Nothing.")
+   
+   local AutoFarm = Tab1:CreateGroupbox("AutoFarm", "Left")
+   local Credits etc = Tab1:CreateGroupbox("Credits etc", "Right")
+   
+   local TROLL = Tab2:CreateGroupbox("TROLL", "Left")
+   local BlackMAN = Tab2:CreateGroupbox(" BlackMAN", "Right")
+   
+   local ExampleToggle = AutoFarm:CreateToggle("Autofarm", function(value)
+      for i,v in pairs(game:GetService("Workspace").Hoops:GetChildren()) do
+         firetouchinterest(v, game:GetService('Players').LocalPlayer.Character.HumanoidRootPart, 0)
+         wait()
+         firetouchinterest(v, game:GetService('Players').LocalPlayer.Character.HumanoidRootPart, 1)
+         end
+      print(value)
+   end)
+   
+   local ExampleToggle2 = AutoFarm:CreateToggle("Auto rebirth", function(state)
+      local args = {
+         [1] = "rebirthRequest"
+      }
+      
+      game:GetService("ReplicatedStorage").rEvents.rebirthEvent:FireServer(unpack(args))
+   
+      print(state)
+   end)
+   
+    
+   local ExampleToggle3 = AutoFarm:CreateToggle("kys", function(value)
+      game.Players.LocalPlayer.Character.Humanoid.Health = 0
+      print(value)
+   end)
+   
+   local ExampleToggle4= Credits etc:CreateToggle("My first gui :3", function(state)
+      print(state)
+   end)
+
+   local ExampleToggle5 = Credits etc:CreateToggle("discord : D", function(state)
+      setclipboard("https://discord.gg/9q78c7bYZV")
+     print(state)
+   end)
+
+
+   local ExampleToggle6 = TROLL:CreateToggle("nothing", function(state)
+      print(state)
+   end)
+   
+   local ExampleToggle7 = BlackMAN:CreateToggle("literally", function(state)
+      print(state)
+   end)
+
+ 
+   local ExampleToggle8 = BlackMAN:CreateToggle("LMAO", function(state)
+      print(state)
+   end)
